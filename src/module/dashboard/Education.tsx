@@ -27,11 +27,11 @@ export const Education = () => {
         </Typography>
       </Fade>
       <Fade left>
-        <Typography variant='h2' mb={8}>
+        <Typography variant='h2'>
           EDUCATION
         </Typography>
       </Fade>
-      <div>
+      <div style={{ marginTop: '20px' }}>
         {portfolioInfo?.education.map((el, index) => {
           return (
             <Accordion expanded={expanded === index} onChange={handleChange(index)} key={index}>

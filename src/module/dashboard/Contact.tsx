@@ -62,18 +62,18 @@ export const Contact = () => {
             <Typography variant='h2'>
                 Contact
             </Typography>
-            <Grid container mb={3} >
+            <Grid container style={{ marginTop: '20px' }} >
                 {portfolioInfo?.contact?.map((el, ind) => {
                     return (
-                        <Grid item xs={12} md={6} lg={4} key={ind}>
+                        <Grid item xs={12} md={6} lg={4} key={ind} m={0} p={0}>
                             <Box className={styles.contact}>
                                 <Box className={styles.contactIcon}>
                                     {el?.icon}
                                 </Box>
-                                <Typography className={styles.contactDetail}>
+                                <Typography className={styles.contactUsTitle}>
                                     {el.name}
                                 </Typography>
-                                <Typography variant='subtitle1' mt={2} mb={2}>
+                                <Typography variant='subtitle1' mt={2} mb={2} className={styles.contactDetail}>
                                     {el?.details}
                                 </Typography>
                             </Box>
@@ -89,7 +89,7 @@ export const Contact = () => {
                             Resume
                         </Typography>
                         <div className={styles.button}>
-                            <Button type='submit' className={styles.buttonTheme} >
+                            <Button type='submit' className={styles.buttonTheme} style={{ paddingRight: '0', paddingLeft: '0' }} >
                                 <a href={Resume} download style={{ textDecoration: 'none', width: '100%' }}>
                                     Download
                                 </a>

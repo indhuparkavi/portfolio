@@ -7,10 +7,10 @@ import { portfolioInfo } from "./portfolioData";
 
 export default function Home() {
   return (
-    <div className={styles.portfolioheader} id="home">
-      <div className={styles.home}>
+    <div className={styles.home} id="home" data-section>
+      <div className={styles.portfolioheader}>
         <Fade left>
-          <Typography variant="h1">
+          <Typography variant="h1" className={styles.portfolioheaderText}>
             {portfolioInfo.name}
             <br />
             {portfolioInfo.designation}

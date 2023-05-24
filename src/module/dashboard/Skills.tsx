@@ -21,10 +21,7 @@ export const Skills = () => {
             MY SKILLS
           </Fade>
         </Typography>
-        <Typography variant='h3' mt={4} mb={4}>
-          {/* {portfolioInfo?.skills?.detail} */}
-        </Typography>
-        <Typography variant="h2" className={styles.linearGradient}>
+        <Typography variant="h2" >
           Langauage
         </Typography>
         <Grid container>
@@ -33,17 +30,17 @@ export const Skills = () => {
               <Grid item xs={12} md={6} lg={3} key={index}>
                 <Fade bottom>
                   <Card className={styles.skillsCard}>
-                    <img src={el?.url} alt="Logo" />
-                    <Typography variant='subtitle2' mt={3}>
+                    <Typography variant='subtitle2' >
                       {el?.name}
                     </Typography>
+                    <img src={el?.url} alt="Logo" />
                   </Card>
                 </Fade>
               </Grid>
             )
           })}
         </Grid>
-        <Typography variant="h2" className={styles.linearGradient}>
+        <Typography variant="h2">
           Library
         </Typography>
         <Grid container>
@@ -52,17 +49,17 @@ export const Skills = () => {
               <Grid item xs={12} md={6} lg={3} key={index}>
                 <Fade bottom>
                   <Card className={styles.skillsCard}>
-                    <img src={el?.url} alt="Logo" />
-                    <Typography variant='subtitle2' mt={3}>
+                    <Typography variant='subtitle2'>
                       {el?.name}
                     </Typography>
+                    <img src={el?.url} alt="Logo" />
                   </Card>
                 </Fade>
               </Grid>
             )
           })}
         </Grid>
-        <Typography variant="h2" className={styles.linearGradient}>
+        <Typography variant="h2">
           Tools
         </Typography>
         <Grid container>
@@ -74,9 +71,9 @@ export const Skills = () => {
                     <Typography variant='subtitle2' >
                       {el?.name}
                     </Typography>
-                    <div style={{ display: 'flex' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       {el?.list.map((item, index) => (
-                        <div style={{ width: '150px', height: '150px', marginTop: '10px' }} key={index}>
+                        <div style={{ padding: '0 10%' }} key={index}>
                           <img src={item?.url} style={{ objectFit: 'cover' }} alt="Logo" />
                         </div>
                       ))
@@ -89,7 +86,7 @@ export const Skills = () => {
           })}
         </Grid>
       </Box>
-      <div style={{ marginTop: 100, marginBottom: 100, minWidth: '320px' }}>
+      <div style={{ marginTop: 50, marginBottom: 50, minWidth: '320px' }}>
         <Parallax
           bgImage={require('../../assets/images/parallax.jpg')}
           strength={-300}

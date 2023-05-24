@@ -236,12 +236,12 @@ export const drawer: Drawer[] = [
     scroll: "skills"
   },
   {
-    name: "Education",
-    scroll: "education"
-  },
-  {
     name: "Experience",
     scroll: "experience"
+  },
+  {
+    name: "Education",
+    scroll: "education"
   },
   {
     name: "Work",

@@ -17,14 +17,14 @@ export const About = () => {
                     WHO AM I?
                 </Fade>
             </Typography>
-            <Typography variant='h3' mt={4} mb={4}>
+            <Typography variant='h3' className={styles.marginTopBottom}>
                 <b style={{ color: 'black' }}>
                     Hi I'm {portfolioInfo.name}.</b> {portfolioInfo?.about?.description}
             </Typography>
-            <Grid container>
+            <Grid container className={styles.marginTopBottom}>
                 {portfolioInfo?.about?.skills?.map((el, ind) => {
                     return (
-                        <Grid item xs={12} md={6} lg={3} key={ind}>
+                        <Grid item xs={12} md={6} lg={3} key={ind} >
                             <Fade right>
                                 <Card className={ind === 0 ? styles.skillsCard1 : (ind === 1 ? styles.skillsCard2 : (ind === 2 ? styles.skillsCard3 : styles.skillsCard4))}>
                                     {el?.icon}
@@ -38,8 +38,8 @@ export const About = () => {
                 })}
             </Grid>
             <Fade bottom>
-                <Card className={styles.projects}>
-                    <Typography variant='h5' m={0} p={0}>
+                <Card className={`${styles.aboutYellowCard}`}>
+                    <Typography variant='h5' m={0} p={0} className={styles.aboutYellowCardText}>
                         I am happy to know you that +{portfolioInfo?.about?.project} projects done sucessfully!
                     </Typography>
                 </Card>

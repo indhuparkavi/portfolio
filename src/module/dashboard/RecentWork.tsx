@@ -12,12 +12,12 @@ export const Work = () => {
           WORK
         </Fade>
       </Typography>
-      <Typography variant='h2' mb={8}>
+      <Typography variant='h2'>
         <Fade left>
           RECENT WORK
         </Fade>
       </Typography>
-      <Grid container>
+      <Grid container style={{ marginTop: '20px' }}>
         {portfolioInfo?.work?.map((el, ind) => {
           return (
             <Grid item xs={12} md={4} lg={4} key={ind}>
