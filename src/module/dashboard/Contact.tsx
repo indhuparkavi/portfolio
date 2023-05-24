@@ -36,7 +36,7 @@ export const Contact = () => {
             console.log(form?.current);
 
             try {
-                await emailjs.sendForm('service_zyx5mzf', 'template_l9340zb', form.current, 'EZG7tyCs1u8OUN77URZU0')
+                await emailjs.sendForm('indhuParkavi@123', 'template_l9340zb', form.current, 'YIRtEjpFO_lbVbqHj')
                 setOpen(true);
                 setSeverity('success')
             } catch (err) {
@@ -62,29 +62,34 @@ export const Contact = () => {
             <Typography variant='h2'>
                 Contact
             </Typography>
-            <Grid container style={{ marginTop: '20px' }} >
+            <Grid container style={{ marginTop: '20px' }}
+                alignItems="center"
+                justifyContent="center"
+            >
                 {portfolioInfo?.contact?.map((el, ind) => {
                     return (
                         <Grid item xs={12} md={6} lg={4} key={ind} m={0} p={0}>
-                            <Box className={styles.contact}>
-                                <Box className={styles.contactIcon}>
-                                    {el?.icon}
+                            <div className={styles.card}>
+                                <Box className={styles.contact}>
+                                    <Box className={styles.contactIcon}>
+                                        {el?.icon}
+                                    </Box>
+                                    <Typography className={styles.contactUsTitle}>
+                                        {el.name}
+                                    </Typography>
+                                    <Typography variant='subtitle1' mt={2} mb={2} className={styles.contactDetail}>
+                                        {el?.details}
+                                    </Typography>
                                 </Box>
-                                <Typography className={styles.contactUsTitle}>
-                                    {el.name}
-                                </Typography>
-                                <Typography variant='subtitle1' mt={2} mb={2} className={styles.contactDetail}>
-                                    {el?.details}
-                                </Typography>
-                            </Box>
-                            <br />
+                                <br />
+                            </div>
                         </Grid>
                     )
                 })}
             </Grid>
             <Grid container>
-                <Grid item xs={12} md={6}>
-                    <Card>
+                <Grid item xs={12} md={6} m={0} p={0}>
+                    <Card className={styles.card}>
                         <Typography p={2}>
                             Resume
                         </Typography>
@@ -99,73 +104,75 @@ export const Contact = () => {
                     <br />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <form onSubmit={handleSubmit(onSubmit)} ref={form}>
-                        <TextField
-                            size="small"
-                            variant="outlined"
-                            placeholder='Name'
-                            style={{ width: '99%' }}
-                            {...register("name", { required: true })}
-                        />
-                        {errors.name && (
-                            <Typography color="red" fontSize={10} p={0} m={0} variant='body2'>
-                                This field is required
-                            </Typography>
-                        )}
-                        <br />
-                        <TextField
-                            variant="outlined"
-                            size='small'
-                            placeholder='Email'
-                            style={{ width: '99%' }}
-                            {...register("email", {
-                                required: "This field is required",
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                    message: "Invalid email address"
-                                },
-                            })}
-                        />
-                        {errors.email && (
-                            <Typography color="red" variant='body2' p={0} m={0} fontSize={10}>
-                                {errors.email?.message}
-                            </Typography>
-                        )}
-                        <br />
-                        <TextField
-                            variant="outlined"
-                            size='small'
-                            placeholder='Subject'
-                            style={{ width: '99%' }}
-                            {...register("subject", { required: true })}
-                        />
-                        {errors.subject && (
-                            <Typography color="red" variant='body2' p={0} m={0} fontSize={10}>
-                                This field is required
-                            </Typography>
-                        )}
-                        <br />
-                        <TextField
-                            placeholder="Message"
-                            variant="outlined"
-                            size='small'
-                            style={{ width: '99%' }}
-                            multiline={true}
-                            rows={5}
-                            {...register("message", { required: true })}
-                        />
-                        {errors.message && (
-                            <Typography color="red" variant='body2' p={0} m={0} fontSize={10}>
-                                This field is required
-                            </Typography>
-                        )}
-                        <br />
-                        <div className={styles.button}>
-                            <Button type='submit' className={styles.buttonTheme}>
-                                Send Message
-                            </Button>
-                        </div>
-                    </form>
+                    <div className={styles.card} style={{ backgroundColor: 'transparent' }}>
+                        <form onSubmit={handleSubmit(onSubmit)} ref={form}>
+                            <TextField
+                                size="small"
+                                variant="outlined"
+                                placeholder='Name'
+                                style={{ width: '99%' }}
+                                {...register("name", { required: true })}
+                            />
+                            {errors.name && (
+                                <Typography color="red" fontSize={10} p={0} m={0} variant='body2'>
+                                    This field is required
+                                </Typography>
+                            )}
+                            <br />
+                            <TextField
+                                variant="outlined"
+                                size='small'
+                                placeholder='Email'
+                                style={{ width: '99%' }}
+                                {...register("email", {
+                                    required: "This field is required",
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                        message: "Invalid email address"
+                                    },
+                                })}
+                            />
+                            {errors.email && (
+                                <Typography color="red" variant='body2' p={0} m={0} fontSize={10}>
+                                    {errors.email?.message}
+                                </Typography>
+                            )}
+                            <br />
+                            <TextField
+                                variant="outlined"
+                                size='small'
+                                placeholder='Subject'
+                                style={{ width: '99%' }}
+                                {...register("subject", { required: true })}
+                            />
+                            {errors.subject && (
+                                <Typography color="red" variant='body2' p={0} m={0} fontSize={10}>
+                                    This field is required
+                                </Typography>
+                            )}
+                            <br />
+                            <TextField
+                                placeholder="Message"
+                                variant="outlined"
+                                size='small'
+                                style={{ width: '99%' }}
+                                multiline={true}
+                                rows={5}
+                                {...register("message", { required: true })}
+                            />
+                            {errors.message && (
+                                <Typography color="red" variant='body2' p={0} m={0} fontSize={10}>
+                                    This field is required
+                                </Typography>
+                            )}
+                            <br />
+                            <div className={styles.button}>
+                                <Button type='submit' className={styles.buttonTheme}>
+                                    Send Message
+                                </Button>
+                            </div>
+                        </form>
+                    </div>
                 </Grid>
             </Grid>
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>

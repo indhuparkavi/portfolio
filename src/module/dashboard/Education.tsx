@@ -40,20 +40,20 @@ export const Education = () => {
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
-                <Typography variant='subtitle1' color='#000'>
+                <Typography variant='subtitle1' color='#000' className={styles.education}>
                   {el?.name}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails
                 sx={{ backgroundColor: '#F2F3F7' }}
               >
-                <Typography variant='subtitle1'>
+                <Typography variant='subtitle1' className={styles.education}>
                   {el?.institution}
                 </Typography>
-                <Typography variant='h3'>
+                <Typography variant='h3' className={styles.education}>
                   {el?.loctaion}
                 </Typography>
-                <Typography variant='h3'>
+                <Typography variant='h3' className={styles.education}>
                   Scored:  {el?.score}
                 </Typography>
               </AccordionDetails>

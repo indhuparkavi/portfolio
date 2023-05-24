@@ -1,5 +1,5 @@
+import { Box, Grid, Typography } from '@mui/material';
 import styles from './Home.module.css';
-import { Box, Card, Grid, Typography } from '@mui/material'
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 import { portfolioInfo } from './portfolioData';
@@ -20,8 +20,8 @@ export const Work = () => {
       <Grid container style={{ marginTop: '20px' }}>
         {portfolioInfo?.work?.map((el, ind) => {
           return (
-            <Grid item xs={12} md={4} lg={4} key={ind}>
-              <Card >
+            <Grid item xs={12} md={4} lg={4} key={ind} m={0} p={0}>
+              <div className={styles.card}>
                 <div className={styles.folio1}>
                   <div className={styles.folio_text}>
                     <Typography variant='subtitle1' ml={10} mt={0}>
@@ -38,7 +38,7 @@ export const Work = () => {
                     />
                   </div>
                 </div>
-              </Card>
+              </div>
             </Grid>
           );
         })}
