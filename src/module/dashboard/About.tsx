@@ -19,7 +19,7 @@ export const About = () => {
             </Typography>
             <Typography variant='h3' className={styles.marginTopBottom}>
                 <b style={{ color: 'black' }}>
-                    Hi I'm {portfolioInfo.name}.</b> {portfolioInfo?.about?.description}
+                    Hi, I'm {portfolioInfo.name}.</b> {portfolioInfo?.about?.description}
             </Typography>
             <Grid container className={styles.marginTopBottom}>
                 {portfolioInfo?.about?.skills?.map((el, ind) => {
