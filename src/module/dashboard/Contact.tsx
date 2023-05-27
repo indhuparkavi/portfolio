@@ -60,7 +60,7 @@ export const Contact = () => {
                 GET IN TOUCH
             </Typography>
             <Typography variant='h2'>
-                Contact
+                CONTACT
             </Typography>
             <Grid container style={{ marginTop: '20px' }}
                 alignItems="center"

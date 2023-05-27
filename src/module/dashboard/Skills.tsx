@@ -13,12 +13,12 @@ export const Skills = () => {
       <Box className={styles.box}>
         <Typography variant='h6'>
           <Fade left>
-            MY SPECIALTY
+            SPECIALTY
           </Fade>
         </Typography>
         <Typography variant='h2'>
           <Fade left>
-            MY SKILLS
+            SKILLS
           </Fade>
         </Typography>
         <Typography variant="h2" >

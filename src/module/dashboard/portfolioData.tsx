@@ -181,16 +181,19 @@ export const portfolioInfo = {
   work: [
     {
       name: 'Marketspark',
+      app: 'Project Management',
       url: marketspark,
       describe: 'Our comprehensive marketing solutions help businesses just like yours thrive and grow'
     },
     {
       name: 'Fanmode',
+      app: 'Web Page',
       url: fanmode,
       describe: 'Make The World A Stadium'
     },
     {
       name: 'Vinayak',
+      app: 'Stock Management',
       url: vinayak,
       describe: 'Scaffolding regardless of the volume.'
     },

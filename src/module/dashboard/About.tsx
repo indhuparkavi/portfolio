@@ -40,7 +40,7 @@ export const About = () => {
             <Fade bottom>
                 <Card className={`${styles.aboutYellowCard}`}>
                     <Typography variant='h5' m={0} p={0} className={styles.aboutYellowCardText}>
-                        I am happy to share that I have done +{portfolioInfo?.about?.project} sucessful projects.
+                        I am happy to share that I have done {portfolioInfo?.about?.project}+ sucessful projects.
                     </Typography>
                 </Card>
             </Fade>

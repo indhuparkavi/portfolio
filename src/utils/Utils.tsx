@@ -39,13 +39,11 @@ export const theme = createTheme({
     h1: {
       fontSize: 50,
       color: '#fff',
-      fontFamily: 'Playfair Display',
     },
     h5: {
       fontSize: 30,
       color: '#000',
       margin: '40px 30px',
-      fontFamily: 'Playfair Display',
       [`@media query and screen(max-width: 768px)`]: {
         fontSize: 10,
       },
@@ -55,8 +53,8 @@ export const theme = createTheme({
       paddingTop: 20,
       paddingBottom: 20,
       fontWeight: 800,
-      fontFamily: 'Playfair Display',
       letterSpacing: 5,
+      color: '#444'
     },
     h3: {
       fontSize: 15,
@@ -74,7 +72,6 @@ export const theme = createTheme({
     body1: {
       fontSize: 20,
       fontWeight: 'bold',
-      fontFamily: 'Playfair Display',
     },
     body2: {
       fontSize: 13,

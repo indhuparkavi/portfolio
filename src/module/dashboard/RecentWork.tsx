@@ -24,7 +24,10 @@ export const Work = () => {
               <div className={styles.card}>
                 <div className={styles.folio1}>
                   <div className={styles.folio_text}>
-                    <Typography variant='subtitle1' ml={10} mt={0}>
+                    <Typography variant='h4' ml={10} mt={0} color='#fff'>
+                      {el?.app}
+                    </Typography>
+                    <Typography variant='subtitle1' ml={10} mt={0} style={{ fontWeight: 900 }}>
                       {el?.name}
                     </Typography>
                     <Typography variant='subtitle2' ml={10} mt={0}>
