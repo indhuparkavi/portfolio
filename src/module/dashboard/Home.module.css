@@ -145,6 +145,10 @@
     display: none;
 }
 
+.marginLeft {
+    margin-left: 30px !important;
+}
+
 /* Hexagon */
 .hexa {
     margin-left: 50px;
@@ -272,6 +276,7 @@
     text-align: center;
     max-width: 350px;
     box-sizing: border-box;
+    padding-top: 20px;
 }
 
 .contactIcon {
@@ -300,7 +305,6 @@
 .button {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
 }
 
 .buttonTheme a {
@@ -344,6 +348,15 @@
     max-width: 350px;
 }
 
+.form {
+    padding: 20px !important;
+    width: 500px;
+}
+
+.hideOnWebview {
+    display: none;
+}
+
 @media only screen and (max-width:768px) {
     .list {
         width: 90%;
@@ -357,8 +370,17 @@
         font-size: 3vw;
     }
 
+    .form {
+        margin: 10px 0 !important;
+        max-width: 350px;
+    }
+
     .card {
         margin: 10px 0 !important;
+    }
+
+    .webView {
+        padding: 16px;
     }
 }
 
@@ -381,5 +403,29 @@
 
     .education {
         font-size: 4vw !important;
+    }
+
+    .showOnWebview {
+        display: none !important;
+    }
+
+    .hideOnWebview {
+        display: block;
+    }
+
+    .marginLeft {
+        margin-left: 10px !important;
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .webView {
+        padding: 30px;
+    }
+
+    .alignItems {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

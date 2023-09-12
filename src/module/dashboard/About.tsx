@@ -17,7 +17,7 @@ export const About = () => {
                     WHO AM I?
                 </Fade>
             </Typography>
-            <Typography variant='h3' className={styles.marginTopBottom}>
+            <Typography variant='h4' className={styles.marginTopBottom}>
                 <b style={{ color: 'black' }}>
                     Hi, I'm {portfolioInfo.name}.</b> {portfolioInfo?.about?.description}
             </Typography>

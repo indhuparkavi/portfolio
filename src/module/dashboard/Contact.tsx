@@ -88,23 +88,10 @@ export const Contact = () => {
                 })}
             </Grid>
             <Grid container>
-                <Grid item xs={12} md={6} m={0} p={0}>
-                    <Card className={styles.card}>
-                        <Typography p={2}>
-                            Resume
-                        </Typography>
-                        <div className={styles.button}>
-                            <Button type='submit' className={styles.buttonTheme} style={{ paddingRight: '0', paddingLeft: '0' }} >
-                                <a href={Resume} download style={{ textDecoration: 'none', width: '100%' }}>
-                                    Download
-                                </a>
-                            </Button>
-                        </div>
-                    </Card>
-                    <br />
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <div className={styles.card} style={{ backgroundColor: 'transparent' }}>
+                <Grid item xs={12} md={12} lg={12} className={styles.alignItems} >
+                <Card className={`${styles.form} ${styles.webView}`}>
+                    <div >
+                        <Typography p={2}>Get In Touch</Typography>
                         <form onSubmit={handleSubmit(onSubmit)} ref={form}>
                             <TextField
                                 size="small"
@@ -166,13 +153,29 @@ export const Contact = () => {
                                 </Typography>
                             )}
                             <br />
-                            <div className={styles.button}>
+                            <div className={styles.button} style={{padding:'16px 0px'}}>
                                 <Button type='submit' className={styles.buttonTheme}>
                                     Send Message
                                 </Button>
                             </div>
                         </form>
                     </div>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} md={6} lg={0} m={0} p={0} className={styles.hideOnWebview}>
+                    <Card className={styles.card}>
+                        <Typography p={2}>
+                            Resume
+                        </Typography>
+                        <div className={styles.button} style={{marginBottom:'50px'}}>
+                            <Button type='submit' className={styles.buttonTheme} style={{ paddingRight: '0', paddingLeft: '0' }} >
+                                <a href={Resume} download style={{ textDecoration: 'none', width: '100%' }}>
+                                    Download
+                                </a>
+                            </Button>
+                        </div>
+                    </Card>
+                    <br />
                 </Grid>
             </Grid>
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>

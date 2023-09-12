@@ -1,6 +1,7 @@
 import { Inventory, MobileFriendly, Task, Wysiwyg } from '@mui/icons-material';
 import { Mail, Phone, Place } from '@mui/icons-material';
-import fanmode from '../../assets/images/fanmode1.png';
+import fanmode from '../../assets/images/fanmode.jpg';
+import arii from '../../assets/images/arii.webp';
 import marketspark from '../../assets/images/marketspark.png';
 import vinayak from '../../assets/images/project1.jpg';
 import js from '../../assets/images/js.png';
@@ -196,6 +197,11 @@ export const portfolioInfo = {
       app: 'Stock Management',
       url: vinayak,
       describe: 'Scaffolding regardless of the volume.'
+    },
+    {
+      name: 'Arii',
+      url: arii,
+      describe: 'An App for capturing & assessing cognitive abilities of students and improvement.'
     },
   ],
   contact: [

@@ -37,10 +37,10 @@ export const Experience = () => {
                   {el.name}
                 </Typography>
                 {el.jobResponsibilies?.map(item => (
-                  <Typography variant='h4'>{item.name}</Typography>
+                  <Typography variant='h4' fontWeight={600}>{item.name}</Typography>
                 )
                 )}
-                <Timeline className={styles.marginTopBottom}>
+                <Timeline className={`${styles.marginTopBottom} ${styles.marginLeft}`}>
                   {el.jobResponsibilies?.map(item => item.details?.map((el, index) => {
                     return (
                       <div key={index}>
@@ -55,7 +55,7 @@ export const Experience = () => {
                             <div
                               style={{ marginTop: '-8px' }}
                             >
-                              <Typography variant='subtitle2'>
+                              <Typography variant='h4' style={{paddingBottom:'10px'}}>
                                 {el}
                               </Typography>
                             </div>
@@ -68,18 +68,18 @@ export const Experience = () => {
                 </Timeline>
                 <div style={{ marginTop: '20px' }}>
                   {el.technicalExperiences?.map((item, index) => (
-                    <Typography variant='h4' key={index}>{item.name}</Typography>
+                    <Typography variant='h4' fontWeight={600} key={index}>{item.name}</Typography>
                   )
                   )}
-                  <List style={{ margin: 0 }}>
+                  <List className={styles.marginLeft}>
                     {el.technicalExperiences?.map(item => item.details?.map((el, index) => {
                       return (
-                        <ListItem style={{ textDecoration: 'none', color: '#000', cursor: 'default' }} key={index}>
+                        <ListItem style={{ textDecoration: 'none', color: '#000', cursor: 'default',padding:0 }} key={index}>
                           <ListItemIcon style={{ minWidth: '30px' }}>
                             <Star style={{ color: '#4C99F0', fontSize: 12 }} />
                           </ ListItemIcon>
                           <ListItemText >
-                            <Typography variant='subtitle2' >
+                            <Typography variant='h4' >
                               {el}
                             </Typography>
                           </ListItemText>

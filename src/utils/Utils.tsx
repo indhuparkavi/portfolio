@@ -63,6 +63,7 @@ export const theme = createTheme({
     },
     h4: {
       fontSize: 17,
+      lineHeight:'30px'
     },
     h6: {
       fontSize: 10,
@@ -144,10 +145,10 @@ export const theme = createTheme({
           alignItems: 'center',
           justifyContent: 'center',
           color: grey[700],
-          ":hover": {
-            color: '#4C99F0',
-            textDecoration: 'underline',
-          }
+          // ":hover": {
+          //   color: '#4C99F0',
+          //   textDecoration: 'underline',
+          // }
         }
       }
     },

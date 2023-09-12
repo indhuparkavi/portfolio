@@ -1,11 +1,13 @@
-import { Close } from "@mui/icons-material";
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Close, Download } from "@mui/icons-material";
+import { Box, Button, List, ListItem, Typography } from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import { Link } from 'react-scroll';
 import BG from '../../assets/images/bg.jpg';
 import Profile from '../../assets/images/profile.jpg';
 import styles from '../dashboard/Home.module.css';
 import { drawer } from "../dashboard/portfolioData";
+// @ts-ignore
+import Resume from '../../assets/IndhuResume.pdf';
 
 export default function DrawerList({ setMobileOpen }: any) {
 
@@ -49,6 +51,17 @@ export default function DrawerList({ setMobileOpen }: any) {
           <br />
           8807742115
         </Typography>
+        <br />
+        <br />
+      </ListItem>
+      <ListItem >
+        <div className={`${styles.button}`} style={{ width: '150px' }}>
+          <Button type='submit' className={styles.buttonTheme} style={{ width: '150px' }} onClick={handleClose}> 
+            <a href={Resume} download style={{ textDecoration: 'none', width: '100%' }}>
+              Resume <Download style={{ marginBottom: '-8px' }} />
+            </a>
+          </Button>
+        </div>
       </ListItem>
     </List >
   )
